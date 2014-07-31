@@ -19,4 +19,6 @@ end
 
 puts %x[ls -a]
 
-pyscript = %x[./pycompile]
+currentDir = File.expand_path(File.dirname(__FILE__))
+
+pyscript = %x[#{currentDir}/pycompile]
