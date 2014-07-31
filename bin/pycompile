@@ -62,8 +62,8 @@ echo $CACHE_DIR
 APP_DIR="/app"
 deep-mv $BUILD_DIR $APP_DIR
 ORIG_BUILD_DIR=$BUILD_DIR
-BUILD_DIR="$APP_DIR/imageWorker"
-cd $BUILD_DIR
+BUILD_DIR=$APP_DIR
+cd "$BUILD_DIR/imageworker"
 
 echo $BUILD_DIR
 echo `ls -a`
@@ -90,7 +90,7 @@ tar -xzf $CACHE_DIR/env.tar.gz -C $BUILD_DIR
 
 
 # installing application dependencies
-if [ -f $BUILD_DIR/requirements.txt ]; then
+if [ -f requirements.txt ]; then
 title "Found requirements.txt, installing dependencies using pip"
 $BUILD_DIR/.heroku/python/bin/pip install -r requirements.txt --exists-action=w --src=./.heroku/src --allow-all-external
 fi
@@ -108,5 +108,7 @@ export PYTHONPATH="\$HOME/.heroku/python/lib/python2.7/site-packages/:\$HOME/.he
 EOF
 
 deep-mv $BUILD_DIR $ORIG_BUILD_DIR
+
+cd ..
 
 title "Buildpack installed."
