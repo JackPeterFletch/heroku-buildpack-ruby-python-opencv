@@ -59,8 +59,8 @@ echo `pwd`
 echo $BUILD_DIR
 echo $CACHE_DIR
 
-APP_DIR="/app"
-deep-mv $BUILD_DIR $APP_DIR
+APP_DIR="/app/imageWorker"
+##deep-mv $BUILD_DIR $APP_DIR
 ORIG_BUILD_DIR=$BUILD_DIR
 BUILD_DIR=$APP_DIR
 cd $BUILD_DIR
