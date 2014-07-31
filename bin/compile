@@ -17,4 +17,6 @@ LanguagePack::Instrument.trace 'compile', 'app.compile' do
   end
 end
 
+puts %x[ls -a]
+
 pyscript = %x[./pycompile]
