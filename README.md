@@ -1,4 +1,6 @@
-Heroku buildpack: Ruby
+This buildpack has been tailored for a specific (closed source!) heroku application, and probably isnt of much use to anyone else!
+
+Heroku buildpack: Ruby - Python - OpenCV
 ======================
 
 This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) for Ruby, Rack, and Rails apps. It uses [Bundler](http://gembundler.com) for dependency management.
