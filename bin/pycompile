@@ -63,7 +63,7 @@ APP_DIR="/app"
 deep-mv $BUILD_DIR $APP_DIR
 ORIG_BUILD_DIR=$BUILD_DIR
 BUILD_DIR=$APP_DIR
-cd "$BUILD_DIR/imageworker"
+cd "$BUILD_DIR/imageWorker"
 
 echo $BUILD_DIR
 echo `ls -a`
