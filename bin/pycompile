@@ -53,11 +53,23 @@ deep-rm() {
 BUILD_DIR=$1
 CACHE_DIR=$2
 
-APP_DIR="/app/imageWorker"
+echo "DEBUG LINES ------"
+echo ls -a
+echo pwd
+echo $BUILD_DIR
+echo $CACHE_DIR
+echo 
+
+APP_DIR="/app"
 deep-mv $BUILD_DIR $APP_DIR
 ORIG_BUILD_DIR=$BUILD_DIR
 BUILD_DIR=$APP_DIR
 cd $BUILD_DIR
+
+echo $BUILD_DIR
+echo ls -a
+echo "DEBUG LINES"
+
 
 unset ATLAS BLAS LAPACK LD_LIBRARY_PATH PATH PYTHONPATH
 export ATLAS="$BUILD_DIR/.heroku/vendor/lib/atlas-base/libatlas.a"

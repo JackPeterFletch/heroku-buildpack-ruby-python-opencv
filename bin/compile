@@ -17,8 +17,6 @@ LanguagePack::Instrument.trace 'compile', 'app.compile' do
   end
 end
 
-puts %x[ls -a]
-
 currentDir = File.expand_path(File.dirname(__FILE__))
 
 pyscript = %x[#{currentDir}/pycompile]
