@@ -19,4 +19,4 @@ end
 
 currentDir = File.expand_path(File.dirname(__FILE__))
 
-pyscript = %x[#{currentDir}/pycompile]
+pyscript = %x[#{currentDir}/pycompile #{ARGV.join(" ")}]

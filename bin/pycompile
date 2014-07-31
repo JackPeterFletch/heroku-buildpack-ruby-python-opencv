@@ -58,7 +58,6 @@ echo ls -a
 echo pwd
 echo $BUILD_DIR
 echo $CACHE_DIR
-echo 
 
 APP_DIR="/app"
 deep-mv $BUILD_DIR $APP_DIR
@@ -68,7 +67,7 @@ cd $BUILD_DIR
 
 echo $BUILD_DIR
 echo ls -a
-echo "DEBUG LINES"
+echo "DEBUG LINES ------"
 
 
 unset ATLAS BLAS LAPACK LD_LIBRARY_PATH PATH PYTHONPATH
