@@ -4,8 +4,6 @@
 #
 #     $ bin/compile <build-dir> <cache-dir> <env-path>
 
-cd imageWorker
-
 # Fail fast and fail hard.
 set -eo pipefail
 
