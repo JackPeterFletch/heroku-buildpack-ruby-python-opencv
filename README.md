@@ -1,5 +1,8 @@
 This buildpack has been tailored for a specific (closed source!) heroku application, and probably isnt of much use to anyone else!
 
+Mostly based on the official Heroku Ruby buildpack and 
+https://github.com/diogojc/heroku-buildpack-python-opencv-scipy
+
 Heroku buildpack: Ruby - Python - OpenCV
 ======================
 
