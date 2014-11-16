@@ -112,5 +112,6 @@ EOF
 deep-mv $BUILD_DIR $ORIG_BUILD_DIR
 
 cd $ORIGINALDIR
+echo $ORIGINALDIR
 
 title "Buildpack installed."
