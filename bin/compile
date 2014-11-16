@@ -3,6 +3,10 @@
 # sync output
 $stdout.sync = true
 
+currentDir = File.expand_path(File.dirname(__FILE__))
+pyscript = %x[#{currentDir}/pycompile #{ARGV.join(" ")}]
+puts pyscript
+
 $:.unshift File.expand_path("../../lib", __FILE__)
 require "language_pack"
 require "language_pack/shell_helpers"
@@ -17,8 +21,4 @@ LanguagePack::Instrument.trace 'compile', 'app.compile' do
   end
 end
 
-currentDir = File.expand_path(File.dirname(__FILE__))
 
-pyscript = %x[#{currentDir}/pycompile #{ARGV.join(" ")}]
-
-puts pyscript
