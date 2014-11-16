@@ -19,9 +19,10 @@ if system "#{open_cv_command} #{ARGV[0]} #{ARGV[1]}"
     end
   end
 
-  currentDir = File.expand_path(File.dirname(__FILE__))
-  pyscript = %x[#{currentDir}/pycompile #{ARGV.join(" ")}]
-  puts pyscript
+  
 end
 
+currentDir = File.expand_path(File.dirname(__FILE__))
+pyscript = %x[#{currentDir}/pycompile #{ARGV.join(" ")}]
+puts pyscript
 
