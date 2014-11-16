@@ -108,4 +108,7 @@ EOF
 
 deep-mv $BUILD_DIR $ORIG_BUILD_DIR
 
+echo "Hacking ruby-opencv in    "
+gem install ruby-opencv
+
 title "Buildpack installed."
