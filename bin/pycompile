@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+ORIGINALDIR=pwd
+
 title() {
     echo "-----> $*"
 }
@@ -109,6 +111,6 @@ EOF
 
 deep-mv $BUILD_DIR $ORIG_BUILD_DIR
 
-cd ..
+cd $ORIGINALDIR
 
 title "Buildpack installed."
